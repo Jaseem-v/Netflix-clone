@@ -1,4 +1,65 @@
-.black{
-    height: 100vh;
-    background: #000;
+.movies {
+    margin: 3rem;
+    padding-bottom: 5rem;
 }
+.movies .catogary-title{
+    margin-top: -3rem;
+}
+.movies .catogary-title h1{
+    color: #fff;
+    letter-spacing: 1px;
+
+}
+
+.movies .movies-card {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 450ms;
+    width: 100vw;
+}
+
+
+.movies .movies-card img {
+    min-height: 0;
+    padding-top: 3.5rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    transition: all 45ms;
+}
+
+.big{
+    height: 450px;
+    width: 24rem;
+}
+
+.small{
+    height: 300px;
+    width: 24rem;
+}
+
+.movies .movies-card::-webkit-scrollbar{
+    display: none;
+    
+}
+
+.movies .movies-card img:hover{
+    transition-timing-function: ease-in;
+    opacity: 1;
+    transform: scale(1.05);
+  
+}
+
+.movies .movies-card:hover >img {
+    opacity: 1;
+}
+
+.youtube{
+    margin-top: 1rem;
+    padding-left: 1rem;
+    
+}
+
+

@@ -1,25 +1,27 @@
 import React from 'react'
+import {API_KEY,imageUrl} from '../../constants/constants'
 import "./Banner.css"
-import logo from "../assets/netflix_PNG15.png"
-
+import { useState,useEffect } from 'react'
+import axios from '../../axios'
 
 function Banner() {
+    const [movies, setMovies] = useState('')
+    useEffect(() => {
+        axios.get(`trending/all/week?api_key=${API_KEY}&language=en-US`).then((response)=>{
+            const randomPick = response.data.results[Math.floor(Math.random()*response.data.results.length)]
+            setMovies(randomPick)
+        })
+    }, [ ])
     return (
         <div>
-            <div className="banner">
+            <div className="banner"  style={{backgroundImage:`url(${movies ? imageUrl +movies.backdrop_path : ""})`}}>
                 <div className="left-shadow">
                     <div className="content">
-                        <div className="logo-title">
-                            <img src={logo} alt="" />
-                            <h1>Series </h1>
-                        </div>
                         <div className="title">
-                            <h1>money <br /> <span> Heist </span> </h1>
+                            <h1>{movies ? movies.title ? movies.title : movies.name : ''} </h1>
                         </div>
                         <div className="discription">
-                            <p>A criminal mastermind who goes by "The Professor" has a plan to pull off the biggest heist in recorded history
-                            -- to print billions of euros in the Royal Mint of Spain. To help him carry out the ambitious plan,
-                                he recruits eight people with certain abilities and who have nothing to lose. The group o…......</p>
+                            <p>{ movies ? movies.overview : "" }</p>
                         </div>
                         <div className="cta">
                             <button className="btn play"><i className="fas fa-play"></i>Play</button>

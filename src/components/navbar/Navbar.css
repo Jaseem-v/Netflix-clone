@@ -26,11 +26,15 @@
 }
 
 .Navbar-left ul li {
-    margin-right: 2rem;
     color: #fff;
     font-size: 1.1em;
     letter-spacing: 2px;
     cursor: pointer;
+    padding: .5rem 1rem;
+}
+
+.Navbar-left ul li:hover {
+    background: rgba(170, 170, 170, 0.349);
 }
 
 /* search button */
