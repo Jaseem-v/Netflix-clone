@@ -15,7 +15,6 @@ const ModalDetails = ({ movie,youtubeID,setYoutubeID }) => {
         })
     }
     const opts = {
-        height: '570',
         width: '99%',
         playerVars: {
             autoplay: 1,
@@ -43,7 +42,7 @@ const ModalDetails = ({ movie,youtubeID,setYoutubeID }) => {
                 </button>
             </div>
             <div className="youtube">
-                {youtubeID && <YouTube videoId={youtubeID.key} opts={opts} />}
+                {youtubeID && <YouTube videoId={youtubeID.key} opts={opts} className={'youtube-iframer'}    id={"youtube-iframer"}  />}
 
             </div>
         </div>

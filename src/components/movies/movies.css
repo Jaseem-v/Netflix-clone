@@ -2,13 +2,14 @@
     margin: 3rem;
     padding-bottom: 5rem;
 }
-.movies .catogary-title{
+
+.movies .catogary-title {
     margin-top: -3rem;
 }
-.movies .catogary-title h1{
+
+.movies .catogary-title h1 {
     color: #fff;
     letter-spacing: 1px;
-
 }
 
 .movies .movies-card {
@@ -23,7 +24,6 @@
     overflow-y: scroll;
 }
 
-
 .movies .movies-card img {
     min-height: 0;
     padding-top: 3.5rem;
@@ -33,26 +33,25 @@
     transition: all 45ms;
 }
 
-.big{
+.big {
     height: 450px;
     width: 24rem;
 }
 
-.big:hover ,.small:hover{
+.big:hover, .small:hover {
     width: 25rem;
 }
 
-.small{
+.small {
     height: 300px;
     width: 24rem;
 }
 
-.movies .movies-card::-webkit-scrollbar{
+.movies .movies-card::-webkit-scrollbar {
     display: none;
-    
 }
 
-.movies .movies-card img:hover{
+.movies .movies-card img:hover {
     transition-timing-function: ease-in;
     opacity: 1;
     transform: scale(1.05);
@@ -60,8 +59,61 @@
     padding-bottom: .5rem;
 }
 
+#youtube-iframer {
+    height: 36rem !important;
+    width: 99%;
+}
 
-
-.movies .movies-card:hover >img {
+.movies .movies-card:hover>img {
     opacity: 1;
+}
+
+@media screen and (max-width: 780px) {
+    .big {
+        height: 390px;
+        width: 17rem;
+    }
+    .small {
+        height: 297px;
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .big {
+        height: 294px;
+        width: 12rem;
+    }
+    .small {
+        height: 247px;
+        width: 10rem;
+    }
+    .movies .movies-card img {
+        min-height: 0;
+        padding-top: 2.5rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        cursor: pointer;
+        transition: all 45ms;
+    }
+    .movies {
+        margin: 1.5rem;
+        margin-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .big {
+        height: 236px;
+        width: 9rem;
+    }
+    .small {
+        height: 213px;
+        width: 8rem;
+    }
+    .movies {
+        margin-top: 4rem;
+        padding-bottom: 1rem;
+    }
 }

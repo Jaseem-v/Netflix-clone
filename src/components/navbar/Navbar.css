@@ -38,15 +38,18 @@
 }
 
 /* search button */
-.search{
+
+.search {
     padding-right: 2rem;
 }
+
 .searchBox {
     border-radius: 40px;
     display: flex;
     align-items: center;
 }
-.searchBox:hover{
+
+.searchBox:hover {
     background: #2f36405b;
     height: 3.2rem;
     padding: 10px;
@@ -54,7 +57,7 @@
 
 .searchInput {
     border: none;
-    background:none;
+    background: none;
     outline: none;
     float: left;
     padding: 0;
@@ -64,6 +67,7 @@
     line-height: 40px;
     width: 0px;
 }
+
 .searchBox:hover>.searchInput {
     width: 240px;
     padding: 0 6px;
@@ -87,15 +91,108 @@
     color: #fff;
 }
 
-.searchButton i{
+.searchButton i {
     font-size: 1.5em;
 }
 
+.menu {
+    display: none;
+}
 
-
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1030px) {
+    .search {
+        padding-right: .5rem;
+    }
     .searchBox:hover>.searchInput {
         width: 150px;
         padding: 0 6px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .searchBox:hover>.searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+    .Navbar-left ul {
+        display: none;
+        flex-direction: column;
+        background: rgb(0, 0, 0);
+        margin-top: 4rem;
+        z-index: 200;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        padding: 1rem 0 2rem;
+    }
+    .Navbar-left ul.active {
+        display: flex;
+    }
+    .Navbar-left ul li {
+        display: inline;
+        flex: none;
+        border-bottom: 2px solid white;
+        width: 100%;
+        padding: 1rem 4.5rem;
+    }
+    .nav-right {
+        display: flex;
+    }
+    .menu {
+        display: block;
+        background: url(../../assets/menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .menu.active {
+        background: url(../../assets/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 100;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .search {
+        display: none;
+    }
+    .movies .catogary-title h1 {
+        font-size: 1.3em;
+    }
+    .youtube {
+        position: absolute;
+        top: 299px;
+        left: -19px;
+        height: 0%;
+        width: 100%;
+        padding-left: 2rem;
+    }
+    .modal-details {
+        padding-top: 0rem;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:330px){
+    .Navbar-left {
+        padding-left: 1rem;
+    }
+    .Navbar-left ul li {
+        color: #fff;
+        font-size: 1em;
     }
 }

@@ -1,6 +1,6 @@
 .banner {
-    height: 80;
-    background-size: cover ;
+    height: 80vh;
+    background-size: cover;
 }
 
 .left-shadow {
@@ -24,7 +24,7 @@
     padding-left: 2rem;
 }
 
-.content .title{
+.content .title {
     max-width: 600px;
     margin-top: 3rem;
 }
@@ -35,8 +35,6 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
-
-
 
 .content .discription {
     margin-top: 2rem;
@@ -70,7 +68,6 @@
 .content .cta {
     display: flex;
     margin-top: 1rem;
-    padding-left: 1rem;
 }
 
 .content .cta .btn {
@@ -99,4 +96,51 @@
     margin-left: .7rem;
     background: rgb(102, 100, 100);
     color: #fff;
+}
+
+@media screen and (max-width: 780px) {
+    .content .title h1 {
+        font-size: 2.6rem;
+        line-height: 1em;
+    }
+    .content .discription p {
+        font-size: 1rem;
+        line-height: 1.3em;
+    }
+    .content .cta .btn {
+        padding: .5rem 1rem;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .banner {
+        height: 37vh;
+        background-size: cover;
+        width: 100%;
+    }
+    .left-shadow {
+        height: 37vh;
+        width: 100%;
+    }
+    .content .title h1 {
+        font-size: 1.8rem;
+        line-height: 1em;
+    }
+    .content .discription p {
+        display: none;
+    }
+    .content .cta .btn {
+        padding: .5rem 1rem;
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width:330px) {
+    .banner {
+        height: 27vh;
+    }
+    .left-shadow {
+        height: 27vh;
+    }
 }
